@@ -1,0 +1,1011 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>grpc · 《Go 语言知识库》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jins Yin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ide/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://weplay.me" target="_blank" class="custom-link">微架构师</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://quickstarts.io" target="_blank" class="custom-link">快速入门</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../setup/code.html">
+            
+                <a href="../../setup/code.html">
+            
+                    
+                    How to Write Go Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../setup/installation.html">
+            
+                <a href="../../setup/installation.html">
+            
+                    
+                    安装与配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../setup/package-manager.html">
+            
+                <a href="../../setup/package-manager.html">
+            
+                    
+                    包管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../setup/version-manager.html">
+            
+                <a href="../../setup/version-manager.html">
+            
+                    
+                    版本管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../quickstart.html">
+            
+                <a href="../../quickstart.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../datatype/">
+            
+                <a href="../../datatype/">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../datatype/array.html">
+            
+                <a href="../../datatype/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../datatype/slice.html">
+            
+                <a href="../../datatype/slice.html">
+            
+                    
+                    切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../datatype/map.html">
+            
+                <a href="../../datatype/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../datatype/pointer.html">
+            
+                <a href="../../datatype/pointer.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../datatype/string.html">
+            
+                <a href="../../datatype/string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../datatype/struct.html">
+            
+                <a href="../../datatype/struct.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../method.html">
+            
+                <a href="../../method.html">
+            
+                    
+                    方法（method）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../function.html">
+            
+                <a href="../../function.html">
+            
+                    
+                    函数（function）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../goroutine.html">
+            
+                <a href="../../goroutine.html">
+            
+                    
+                    协程（goroutine）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../interface.html">
+            
+                <a href="../../interface.html">
+            
+                    
+                    接口（interface）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../channel.html">
+            
+                <a href="../../channel.html">
+            
+                    
+                    信道（channel）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../concurrency.html">
+            
+                <a href="../../concurrency.html">
+            
+                    
+                    并发（Concurrency）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">命令</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../cmd/go/">
+            
+                <a href="../../cmd/go/">
+            
+                    
+                    go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../cmd/go/go-build.html">
+            
+                <a href="../../cmd/go/go-build.html">
+            
+                    
+                    go build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../cmd/go/go-env.html">
+            
+                <a href="../../cmd/go/go-env.html">
+            
+                    
+                    go env
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../cmd/go/go-help.html">
+            
+                <a href="../../cmd/go/go-help.html">
+            
+                    
+                    go help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../cmd/go/go-install.html">
+            
+                <a href="../../cmd/go/go-install.html">
+            
+                    
+                    go install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../cmd/go/go-run.html">
+            
+                <a href="../../cmd/go/go-run.html">
+            
+                    
+                    go run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../cmd/godoc.html">
+            
+                <a href="../../cmd/godoc.html">
+            
+                    
+                    godoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../cmd/gofmt.html">
+            
+                <a href="../../cmd/gofmt.html">
+            
+                    
+                    gofmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../cmd/cgo.html">
+            
+                <a href="../../cmd/cgo.html">
+            
+                    
+                    cgo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../error-handling.html">
+            
+                <a href="../../error-handling.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../extensions.html">
+            
+                <a href="../../extensions.html">
+            
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../flowcontrol.html">
+            
+                <a href="../../flowcontrol.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../package.html">
+            
+                <a href="../../package.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../variable.html">
+            
+                <a href="../../variable.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../keyword/">
+            
+                <a href="../../keyword/">
+            
+                    
+                    关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../keyword/break.html">
+            
+                <a href="../../keyword/break.html">
+            
+                    
+                    break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../keyword/func.html">
+            
+                <a href="../../keyword/func.html">
+            
+                    
+                    func
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../keyword/package.html">
+            
+                <a href="../../keyword/package.html">
+            
+                    
+                    package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../keyword/type.html">
+            
+                <a href="../../keyword/type.html">
+            
+                    
+                    type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../keyword/range.html">
+            
+                <a href="../../keyword/range.html">
+            
+                    
+                    range
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    misc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../ide/">
+            
+                <a href="../ide/">
+            
+                    
+                    ide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../ide/atom/">
+            
+                <a href="../ide/atom/">
+            
+                    
+                    atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../ide/vscode/">
+            
+                <a href="../ide/vscode/">
+            
+                    
+                    vscode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../style/">
+            
+                <a href="../style/">
+            
+                    
+                    style
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码库</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../pkg/">
+            
+                <a href="../../pkg/">
+            
+                    
+                    pkg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../pkg/stdlib/">
+            
+                <a href="../../pkg/stdlib/">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../../pkg/stdlib/io/">
+            
+                <a href="../../pkg/stdlib/io/">
+            
+                    
+                    io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../../pkg/stdlib/os/">
+            
+                <a href="../../pkg/stdlib/os/">
+            
+                    
+                    os
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../pkg/3rdparty/">
+            
+                <a href="../../pkg/3rdparty/">
+            
+                    
+                    第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../spec/">
+            
+                <a href="../../spec/">
+            
+                    
+                    spec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../suger/">
+            
+                <a href="../../suger/">
+            
+                    
+                    suger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../suger/assignment.html">
+            
+                <a href="../../suger/assignment.html">
+            
+                    
+                    := 语法糖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >grpc</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="grpc">GRPC</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;-api">&#x4EC0;&#x4E48;&#x662F; API</h2>
+<p>&#x5728;&#x5176;&#x6838;&#x5FC3;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#xFF08;API&#xFF09;&#x662F;&#x4F5C;&#x4E3A;&#x4E24;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8F6F;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x4FDD;&#x8BC1;&#x5408;&#x540C;&#x7684;&#x6B63;&#x5F0F;&#x89C4;&#x8303;&#x3002; API&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x4E86;&#x5B83;&#x671F;&#x671B;&#x7684;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#xFF0C;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x548C;&#x534F;&#x8BAE;&#x3002;API&#x7684;&#x6D88;&#x8D39;&#x8005;&#xFF08;&#x79F0;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#xFF09;&#x5C06;&#x4F7F;&#x7528;&#x90A3;&#x4E9B;&#x89C4;&#x5219;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5C06;&#x6C38;&#x8FDC;&#x4E0D;&#x5FC5;&#x62C5;&#x5FC3;API&#x672C;&#x8EAB;&#x7684;&#x5185;&#x90E8;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x9075;&#x5FAA;&#x89C4;&#x5219;&#x3002;</p>
+<h2 id="api-&#x6280;&#x672F;">API &#x6280;&#x672F;</h2>
+<ul>
+<li>TCP / IP &#x5957;&#x63A5;&#x5B57;</li>
+<li>&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#xFF08;RPC&#xFF09;</li>
+<li>&#x516C;&#x5171;&#x5BF9;&#x8C61;&#x8BF7;&#x6C42;&#x4EE3;&#x7406;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF08;CORBA&#xFF09;</li>
+<li>Java &#x8FDC;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF08;RMI&#xFF09;&#x548C;&#x4F01;&#x4E1A;Java Bean&#xFF08;EJB&#xFF09;</li>
+<li>Microsoft &#x5206;&#x5E03;&#x5F0F;&#x7EC4;&#x4EF6;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF08;DCOM&#xFF09; - &#x4E5F;&#x79F0;&#x4E3A;ActiveX</li>
+<li>Web &#x670D;&#x52A1;&#xFF08;SOAP &#x7136;&#x540E; REST&#xFF09;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="https://studygolang.com/articles/12060" target="_blank">Golang &#x4E2D;&#x7684;&#x5FAE;&#x670D;&#x52A1; - &#x7B2C;&#x4E00;&#x90E8;&#x5206;</a></li>
+<li><a href="https://blog.csdn.net/huilan_same/article/details/54378838" target="_blank">&#x4EC0;&#x4E48;&#x662F;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; 2019-2020 | CC BY-NC-SA 4.0 <br> &#x76F8;&#x5173;&#x7F51;&#x7AD9;: <a href="https://weplay.me" target="_blank">&#x77E5;&#x8BC6;&#x5E93;</a> <a href="https://weplay.me" target="_blank">&#x5FAE;&#x67B6;&#x6784;&#x5E08;</a> <a href="https://quickstarts.io" target="_blank">&#x5FEB;&#x901F;&#x5165;&#x95E8;</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x66F4;&#x65B0;&#x4E8E; 2020-02-27 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: misc">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ide/" class="navigation navigation-next " aria-label="Next page: ide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"grpc","level":"5.2","depth":1,"next":{"title":"ide","level":"5.3","depth":1,"path":"misc/ide/README.md","ref":"misc/ide/README.md","articles":[{"title":"atom","level":"5.3.1","depth":2,"path":"misc/ide/atom/README.md","ref":"misc/ide/atom/README.md","articles":[]},{"title":"vscode","level":"5.3.2","depth":2,"path":"misc/ide/vscode/README.md","ref":"misc/ide/vscode/README.md","articles":[]}]},"previous":{"title":"misc","level":"5.1","depth":1,"path":"misc/README.md","ref":"misc/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","highlight","github","-lunr","-search","search-pro","-ga","-page-toc","-splitter","-lightbox","-github-buttons@2.1.0","-custom-favicon","-summary","sitemap-general","edit-link","page-footer-ex"],"styles":{"website":"website.css"},"pluginsConfig":{"github":{"url":"https://github.com/jinsyin/gitbook-template"},"page-footer-ex":{"copyright":"Copyright © 2019-2020 | CC BY-NC-SA 4.0 <br/> 相关网站: [知识库](https://weplay.me) [微架构师](https://weplay.me) [快速入门](https://quickstarts.io)","markdown":true,"update_format":"YYYY-MM-DD","update_label":"更新于"},"search-pro":{},"page-toc":{"selector":".markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":true},"sitemap-general":{"prefix":"https://weplay.me/gitbook-template/"},"highlight":{},"favicon":"favicon.ico","github-buttons":{"repo":"jinsyin/gitbook-template","types":["star"],"size":"small"},"ga":{"token":"UA-12345678-1"},"edit-link":{"label":"编辑","base":"https://github.com/jinsyin/gitbook-template/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jins Yin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Go 语言知识库》","language":"zh-hans","links":{"sidebar":{"微架构师":"https://weplay.me","快速入门":"https://quickstarts.io"}},"gitbook":"*","description":"Go 语言、Golang 知识库"},"file":{"path":"misc/grpc/README.md","mtime":"2020-02-27T07:38:28.779Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T07:39:15.971Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

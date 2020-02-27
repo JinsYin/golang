@@ -1,0 +1,1145 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>切片 · 《Go 语言知识库》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jins Yin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="map.html" />
+    
+    
+    <link rel="prev" href="array.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://weplay.me" target="_blank" class="custom-link">微架构师</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://quickstarts.io" target="_blank" class="custom-link">快速入门</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../setup/code.html">
+            
+                <a href="../setup/code.html">
+            
+                    
+                    How to Write Go Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../setup/installation.html">
+            
+                <a href="../setup/installation.html">
+            
+                    
+                    安装与配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../setup/package-manager.html">
+            
+                <a href="../setup/package-manager.html">
+            
+                    
+                    包管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../setup/version-manager.html">
+            
+                <a href="../setup/version-manager.html">
+            
+                    
+                    版本管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../quickstart.html">
+            
+                <a href="../quickstart.html">
+            
+                    
+                    入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="slice.html">
+            
+                <a href="slice.html">
+            
+                    
+                    切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="pointer.html">
+            
+                <a href="pointer.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="struct.html">
+            
+                <a href="struct.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../method.html">
+            
+                <a href="../method.html">
+            
+                    
+                    方法（method）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../function.html">
+            
+                <a href="../function.html">
+            
+                    
+                    函数（function）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../goroutine.html">
+            
+                <a href="../goroutine.html">
+            
+                    
+                    协程（goroutine）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    接口（interface）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../channel.html">
+            
+                <a href="../channel.html">
+            
+                    
+                    信道（channel）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../concurrency.html">
+            
+                <a href="../concurrency.html">
+            
+                    
+                    并发（Concurrency）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">命令</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../cmd/go/">
+            
+                <a href="../cmd/go/">
+            
+                    
+                    go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../cmd/go/go-build.html">
+            
+                <a href="../cmd/go/go-build.html">
+            
+                    
+                    go build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../cmd/go/go-env.html">
+            
+                <a href="../cmd/go/go-env.html">
+            
+                    
+                    go env
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../cmd/go/go-help.html">
+            
+                <a href="../cmd/go/go-help.html">
+            
+                    
+                    go help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../cmd/go/go-install.html">
+            
+                <a href="../cmd/go/go-install.html">
+            
+                    
+                    go install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../cmd/go/go-run.html">
+            
+                <a href="../cmd/go/go-run.html">
+            
+                    
+                    go run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../cmd/godoc.html">
+            
+                <a href="../cmd/godoc.html">
+            
+                    
+                    godoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../cmd/gofmt.html">
+            
+                <a href="../cmd/gofmt.html">
+            
+                    
+                    gofmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../cmd/cgo.html">
+            
+                <a href="../cmd/cgo.html">
+            
+                    
+                    cgo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../error-handling.html">
+            
+                <a href="../error-handling.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../extensions.html">
+            
+                <a href="../extensions.html">
+            
+                    
+                    插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../flowcontrol.html">
+            
+                <a href="../flowcontrol.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../package.html">
+            
+                <a href="../package.html">
+            
+                    
+                    包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../variable.html">
+            
+                <a href="../variable.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../keyword/">
+            
+                <a href="../keyword/">
+            
+                    
+                    关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../keyword/break.html">
+            
+                <a href="../keyword/break.html">
+            
+                    
+                    break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../keyword/func.html">
+            
+                <a href="../keyword/func.html">
+            
+                    
+                    func
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../keyword/package.html">
+            
+                <a href="../keyword/package.html">
+            
+                    
+                    package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../keyword/type.html">
+            
+                <a href="../keyword/type.html">
+            
+                    
+                    type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../keyword/range.html">
+            
+                <a href="../keyword/range.html">
+            
+                    
+                    range
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    misc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../misc/grpc/">
+            
+                <a href="../misc/grpc/">
+            
+                    
+                    grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../misc/ide/">
+            
+                <a href="../misc/ide/">
+            
+                    
+                    ide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../misc/ide/atom/">
+            
+                <a href="../misc/ide/atom/">
+            
+                    
+                    atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../misc/ide/vscode/">
+            
+                <a href="../misc/ide/vscode/">
+            
+                    
+                    vscode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../misc/style/">
+            
+                <a href="../misc/style/">
+            
+                    
+                    style
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">代码库</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../pkg/">
+            
+                <a href="../pkg/">
+            
+                    
+                    pkg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../pkg/stdlib/">
+            
+                <a href="../pkg/stdlib/">
+            
+                    
+                    标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../pkg/stdlib/io/">
+            
+                <a href="../pkg/stdlib/io/">
+            
+                    
+                    io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../pkg/stdlib/os/">
+            
+                <a href="../pkg/stdlib/os/">
+            
+                    
+                    os
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../pkg/3rdparty/">
+            
+                <a href="../pkg/3rdparty/">
+            
+                    
+                    第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    spec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../suger/">
+            
+                <a href="../suger/">
+            
+                    
+                    suger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../suger/assignment.html">
+            
+                <a href="../suger/assignment.html">
+            
+                    
+                    := 语法糖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >切片</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="golang-&#x5207;&#x7247;&#xFF08;slice&#xFF09;">Golang &#x5207;&#x7247;&#xFF08;Slice&#xFF09;</h1>
+<p>&#x5207;&#x7247;&#x662F;&#x5BF9;&#x5176;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x5B58;&#x50A8;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x63CF;&#x8FF0;&#x4E86;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x6BB5;&#x3002;&#x56E0;&#x6B64;&#x4FEE;&#x6539;&#x5207;&#x7247;&#x5143;&#x7D20;&#x4F1A;&#x4FEE;&#x6539;&#x5176;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x540C;&#x65F6;&#x4E0E;&#x5B83;&#x5171;&#x4EAB;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x5207;&#x7247;&#x4E5F;&#x4F1A;&#x611F;&#x77E5;&#x5230;&#x8FD9;&#x4E9B;&#x53D8;&#x5316;&#x3002;</p>
+<ul>
+<li>&#x5207;&#x7247;&#x7C7B;&#x578B;&#x7684;&#x96F6;&#x503C;&#x4E3A; <code>nil</code></li>
+<li><code>nil</code> &#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;&#x4E3A; 0</li>
+</ul>
+<h2 id="&#x5207;&#x7247;&#x7C7B;&#x578B;">&#x5207;&#x7247;&#x7C7B;&#x578B;</h2>
+<p>&#x7C7B;&#x578B; <code>[]T</code> &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7C7B;&#x578B;&#x4E3A; <code>T</code> &#x7684;&#x5207;&#x7247;&#x7C7B;&#x578B;&#x3002;</p>
+<ul>
+<li>&#x58F0;&#x660E;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> s []T
+</code></pre>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// &#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;</span>
+<span class="hljs-keyword">var</span> s []T = []T{element1, element2, ..., elementN}
+
+<span class="hljs-comment">// &#x901A;&#x8FC7;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+<span class="hljs-comment">// &#x5B83;&#x4F1A;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x534A;&#x5F00;&#x533A;&#x95F4; [low, high)&#xFF1B;&#x9ED8;&#x8BA4;&#x7684;&#x4E0B;&#x754C;&#xFF08;low&#xFF09;&#x4E3A; 0&#xFF0C;&#x4E0A;&#x754C;&#xFF08;high&#xFF09;&#x4E3A;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#x65F6;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x4E0A;&#x4E0B;&#x754C;</span>
+<span class="hljs-keyword">var</span> s []T = arr[low:high]
+
+<span class="hljs-comment">// &#x901A;&#x8FC7;&#x5207;&#x7247;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+<span class="hljs-keyword">var</span> s []T = sls[low:high]
+
+<span class="hljs-comment">// &#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570; make() &#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span>
+<span class="hljs-keyword">var</span> s []T = <span class="hljs-built_in">make</span>([]T, length, capacity) <span class="hljs-comment">// capacity &#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;</span>
+</code></pre>
+<ul>
+<li>&#x5B57;&#x9762;&#x91CF;</li>
+</ul>
+<p>&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x800C;&#x5207;&#x7247;&#x7C7B;&#x4F3C;&#x4E8E;&#x6CA1;&#x6709;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x5207;&#x7247;&#x7684;&#x96F6;&#x503C;&#x4E3A; <code>nil</code>&#xFF0C;nil &#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;&#x90FD;&#x662F; 0 &#x4E14;&#x6CA1;&#x6709;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</span>
+[<span class="hljs-number">3</span>]<span class="hljs-keyword">bool</span>{<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>}
+
+<span class="hljs-comment">// &#x8FD9;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x4E0A;&#x9762;&#x76F8;&#x540C;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x5B83;&#x7684;&#x5207;&#x7247;</span>
+[]<span class="hljs-keyword">bool</span>{<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>}
+</code></pre>
+<h2 id="&#x5185;&#x7F6E;&#x51FD;&#x6570;">&#x5185;&#x7F6E;&#x51FD;&#x6570;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;&#x540D;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len(s)</td>
+<td>&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x6216;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>cap(s)</td>
+<td>&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x6216;&#x5207;&#x7247;&#x7684;&#x5BB9;&#x91CF;</td>
+</tr>
+<tr>
+<td>make([]T, len, cap)</td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x8BE5;&#x6570;&#x7EC4;&#x7684;&#x5207;&#x7247;&#xFF1B;cap &#x53C2;&#x6570;&#x53EF;&#x9009;</td>
+</tr>
+<tr>
+<td>copy(dst, src)</td>
+<td>&#x62F7;&#x8D1D;&#x539F;&#x5207;&#x7247;&#x5143;&#x7D20;&#x5230;&#x65B0;&#x5207;&#x7247;</td>
+</tr>
+<tr>
+<td>append(s []T, elems ...T)</td>
+<td>&#x5411;&#x539F;&#x5207;&#x7247;&#x8FFD;&#x52A0;&#x65B0;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x65B0;&#x5207;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x7B49;&#x4E8E;&#x5B83;&#x6240;&#x5305;&#x542B;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x3002;
+&#x5207;&#x7247;&#x7684;&#x5BB9;&#x91CF;&#x662F;&#x4ECE;&#x5207;&#x7247;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x76F4;&#x5230;&#x5176;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD9;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#xFF0C;&#x5373; <code>cap(slice) == cap(underlyingArrayOfSlice) - lowBoundOfSlice</code>&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x5747;&#x6765;&#x81EA;&#x5185;&#x7F6E;&#x7684;&#x5305; <a href="https://golang.org/pkg/builtin" target="_blank">builtin</a>&#x3002;</p>
+<h2 id="&#x5207;&#x7247;&#x7684;&#x5207;&#x7247;">&#x5207;&#x7247;&#x7684;&#x5207;&#x7247;</h2>
+<p>&#x5207;&#x7247;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;&#x5176;&#x5B83;&#x7684;&#x5207;&#x7247;&#x3002;</p>
+<pre><code class="lang-go">board := [][]string{
+    []string{&quot;_&quot;, &quot;_&quot;, _&quot;},
+    []string{&quot;_&quot;, &quot;_&quot;, _&quot;},
+    []string{&quot;_&quot;, &quot;_&quot;, _&quot;}, // &#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x9017;&#x53F7;
+}
+
+board[1][1] = &quot;X&quot;
+</code></pre>
+<h2 id="&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;">&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;</h2>
+<p>&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x5207;&#x7247;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#xFF0C;&#x4F7F;&#x7528; <code>len()</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6;
+&#x5207;&#x7247;&#x7684;&#x5BB9;&#x91CF;&#x662F;&#x5176;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#xFF0C;&#x4F7F;&#x7528; <code>cap()</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6;</p>
+<h2 id="&#x8FFD;&#x52A0;&#x5143;&#x7D20;">&#x8FFD;&#x52A0;&#x5143;&#x7D20;</h2>
+<p><code>func append&#xFF08;s[]T&#xFF0C;x ... T&#xFF09;[]T</code></p>
+<p>&#x539F;&#x7406;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x5E76;&#x5C06;&#x539F;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x590D;&#x5236;&#x5230;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;&#x7684;&#x65B0;&#x5207;&#x7247;&#x5F15;&#x7528;&#x3002;</p>
+<h2 id="&#x51FD;&#x6570;&#x4F20;&#x9012;">&#x51FD;&#x6570;&#x4F20;&#x9012;</h2>
+<p>&#x5207;&#x7247;&#x5728;&#x5185;&#x90E8;&#x53EF;&#x7531;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;&#x8FD1;&#x4F3C;&#x8868;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> slice <span class="hljs-keyword">struct</span> {
+    Length        <span class="hljs-keyword">int</span>
+    Capacity      <span class="hljs-keyword">int</span>
+    ZerothElement *<span class="hljs-keyword">byte</span>
+}
+</code></pre>
+<h2 id="&#x591A;&#x7EF4;&#x5207;&#x7247;">&#x591A;&#x7EF4;&#x5207;&#x7247;</h2>
+<h2 id="&#x5185;&#x5B58;&#x4F18;&#x5316;">&#x5185;&#x5B58;&#x4F18;&#x5316;</h2>
+<p>&#x5207;&#x7247;&#x672C;&#x8EAB;&#x662F;&#x5BF9;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x5207;&#x7247;&#x5B58;&#x5728;&#x4E8E;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x5C31;&#x4E0D;&#x4F1A;&#x88AB;&#x5783;&#x573E;&#x56DE;&#x6536;&#x6389;&#x3002;</p>
+<p><code>func copy(dst&#xFF0C;src[]T)int</code> &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x6E90;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x5C06;&#x88AB;&#x56DE;&#x6536;&#x3002;</p>
+<h2 id="&#x8303;&#x4F8B;">&#x8303;&#x4F8B;</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-comment">// nil &#x5207;&#x7247;</span>
+    <span class="hljs-keyword">var</span> s []<span class="hljs-keyword">int</span>
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x6570;&#x7EC4;</span>
+    arr := [...]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>}
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA;&#x5207;&#x7247;</span>
+    sls := []<span class="hljs-keyword">int</span>{<span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>}
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x5F15;&#x7528;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;</span>
+    sls1 := arr[:]
+
+    <span class="hljs-comment">// &#x4FEE;&#x6539; sls1 &#x5207;&#x7247;&#x5143;&#x7D20;&#x540E;&#xFF0C;arr &#x4F1A;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x5E76;&#x4E14; sls2 &#x4E5F;&#x4F1A;&#x611F;&#x77E5;&#x5230; arr &#x7684;&#x53D8;&#x5316;</span>
+    sls1[<span class="hljs-number">2</span>] = <span class="hljs-number">33</span>
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x622A;&#x53D6;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;&#xFF08;&#x65B0;&#x5207;&#x7247;&#x5BB9;&#x91CF; == cap(arr) - lowBound&#xFF09;</span>
+    sls2 := arr[<span class="hljs-number">2</span>:]
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x622A;&#x53D6;&#x5207;&#x7247;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;&#xFF08;&#x65B0;&#x5207;&#x7247;&#x5BB9;&#x91CF; == cap(sls) - lowBound&#xFF09;</span>
+    sls3 := sls[:<span class="hljs-number">3</span>]
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570; make() &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;</span>
+    sls4 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-built_in">len</span>(sls), <span class="hljs-built_in">cap</span>(sls)*<span class="hljs-number">2</span>)
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x65B0;&#x5143;&#x7D20;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;&#xFF0C;&#x8FD9;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x5207;&#x7247;&#xFF1B;&#x5982;&#x679C;&#x65B0;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x5C11;&#x4E8E;&#x539F;&#x5207;&#x7247;&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x65B0;&#x5207;&#x7247;&#x7684;&#x5BB9;&#x91CF;</span>
+    sls5 := <span class="hljs-built_in">append</span>(sls1, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>)
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x62F7;&#x8D1D;&#x5207;&#x7247;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5207;&#x7247;</span>
+    <span class="hljs-built_in">copy</span>(sls4, sls)
+
+    fmt.Printf(<span class="hljs-string">&quot;arr=%v len=%d cap=%d type=%T\n&quot;</span>, arr, <span class="hljs-built_in">len</span>(arr), <span class="hljs-built_in">cap</span>(arr), arr)      <span class="hljs-comment">// arr=[1 2 33 4 5] len=5 cap=5 type=[5]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls=%v len=%d cap=%d type=%T\n&quot;</span>, sls, <span class="hljs-built_in">len</span>(sls), <span class="hljs-built_in">cap</span>(sls), sls)      <span class="hljs-comment">// sls=[5 4 3 2 1] len=5 cap=5 type=[]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls1=%v len=%d cap=%d type=%T\n&quot;</span>, sls1, <span class="hljs-built_in">len</span>(sls1), <span class="hljs-built_in">cap</span>(sls1), sls1) <span class="hljs-comment">// sls1=[1 2 33 4 5] len=5 cap=5 type=[]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls2=%v len=%d cap=%d type=%T\n&quot;</span>, sls2, <span class="hljs-built_in">len</span>(sls2), <span class="hljs-built_in">cap</span>(sls2), sls2) <span class="hljs-comment">// sls2=[33 4 5] len=3 cap=3 type=[]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls3=%v len=%d cap=%d type=%T\n&quot;</span>, sls3, <span class="hljs-built_in">len</span>(sls3), <span class="hljs-built_in">cap</span>(sls3), sls3) <span class="hljs-comment">// sls3=[5 4 3] len=3 cap=5 type=[]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls4=%v len=%d cap=%d type=%T\n&quot;</span>, sls4, <span class="hljs-built_in">len</span>(sls4), <span class="hljs-built_in">cap</span>(sls4), sls4) <span class="hljs-comment">// sls4=[5 4 3 2 1] len=5 cap=10 type=[]int</span>
+    fmt.Printf(<span class="hljs-string">&quot;sls5=%v len=%d cap=%d type=%T\n&quot;</span>, sls5, <span class="hljs-built_in">len</span>(sls5), <span class="hljs-built_in">cap</span>(sls5), sls5) <span class="hljs-comment">// sls5=[1 2 33 4 5 6 7] len=7 cap=10 type=[]int</span>
+    fmt.Println(<span class="hljs-string">&quot;nil!&quot;</span>) <span class="hljs-comment">// nil!</span>
+}
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="https://blog.go-zh.org/go-slices-usage-and-internals" target="_blank">Go &#x5207;&#x7247;&#xFF1A;&#x7528;&#x6CD5;&#x548C;&#x672C;&#x8D28;</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; 2019-2020 | CC BY-NC-SA 4.0 <br> &#x76F8;&#x5173;&#x7F51;&#x7AD9;: <a href="https://weplay.me" target="_blank">&#x77E5;&#x8BC6;&#x5E93;</a> <a href="https://weplay.me" target="_blank">&#x5FAE;&#x67B6;&#x6784;&#x5E08;</a> <a href="https://quickstarts.io" target="_blank">&#x5FEB;&#x901F;&#x5165;&#x95E8;</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x66F4;&#x65B0;&#x4E8E; 2020-02-27 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="array.html" class="navigation navigation-prev " aria-label="Previous page: 数组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="map.html" class="navigation navigation-next " aria-label="Next page: Map">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"切片","level":"1.4.2","depth":2,"next":{"title":"Map","level":"1.4.3","depth":2,"path":"datatype/map.md","ref":"datatype/map.md","articles":[]},"previous":{"title":"数组","level":"1.4.1","depth":2,"path":"datatype/array.md","ref":"datatype/array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-fontsettings","-sharing","highlight","github","-lunr","-search","search-pro","-ga","-page-toc","-splitter","-lightbox","-github-buttons@2.1.0","-custom-favicon","-summary","sitemap-general","edit-link","page-footer-ex"],"styles":{"website":"website.css"},"pluginsConfig":{"github":{"url":"https://github.com/jinsyin/gitbook-template"},"page-footer-ex":{"copyright":"Copyright © 2019-2020 | CC BY-NC-SA 4.0 <br/> 相关网站: [知识库](https://weplay.me) [微架构师](https://weplay.me) [快速入门](https://quickstarts.io)","markdown":true,"update_format":"YYYY-MM-DD","update_label":"更新于"},"search-pro":{},"page-toc":{"selector":".markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":true},"sitemap-general":{"prefix":"https://weplay.me/gitbook-template/"},"highlight":{},"favicon":"favicon.ico","github-buttons":{"repo":"jinsyin/gitbook-template","types":["star"],"size":"small"},"ga":{"token":"UA-12345678-1"},"edit-link":{"label":"编辑","base":"https://github.com/jinsyin/gitbook-template/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jins Yin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"《Go 语言知识库》","language":"zh-hans","links":{"sidebar":{"微架构师":"https://weplay.me","快速入门":"https://quickstarts.io"}},"gitbook":"*","description":"Go 语言、Golang 知识库"},"file":{"path":"datatype/slice.md","mtime":"2020-02-27T07:38:28.779Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T07:39:15.971Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
